@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HelpBox.Core\HelpBox.Core.csproj" />
+    <ProjectReference Include="..\HelpBox.Data\HelpBox.Data.csproj" />
+  </ItemGroup>
+
+</Project>
