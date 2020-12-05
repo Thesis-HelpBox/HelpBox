@@ -16,7 +16,7 @@ namespace HelpBox.Data
         public DbSet<Category> Categories{ get; set; }
         public DbSet<Product> Products { get; set; }
 
-        //Veritabanında metotlar oluşmadan önce çalışacak olan metot
+        //Veritabanında tablolar oluşmadan önce çalışacak olan metot
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
