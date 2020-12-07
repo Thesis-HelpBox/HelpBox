@@ -7,9 +7,9 @@ using System.Text;
 
 namespace HelpBox.Data.Configurations
 {
-    class ProductConfigution : IEntityTypeConfiguration<Product>
+    class CustomerConfiguration : IEntityTypeConfiguration<Customer>
     {
-        public void Configure(EntityTypeBuilder<Product> builder)
+        public void Configure(EntityTypeBuilder<Customer> builder)
         {
             //(x product nesnesini temsil ediyor)
             //Id'yi primary key yap
@@ -19,13 +19,10 @@ namespace HelpBox.Data.Configurations
             //Name zorunlu alan olsun ve max uzunluğu 200 olsun
             builder.Property(x => x.Name).IsRequired().HasMaxLength(200);
             //Coupon zorunlu alan
-            builder.Property(x => x.Coupon).IsRequired();
-
-            builder.Property(x => x.Category).IsRequired();
-            builder.Property(x => x.IsActive).IsRequired();
-            builder.Property(x => x.Photo).IsRequired();
-
-
+            builder.Property(x => x.LastName).IsRequired().HasMaxLength(200);
+            builder.Property(x => x.PhoneNumber);
+            builder.Property(x => x.IdentityNumber).IsRequired();
+            builder.Property(x => x.Communication).IsRequired();
         }
     }
 }

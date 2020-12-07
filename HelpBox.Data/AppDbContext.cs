@@ -1,4 +1,5 @@
 ﻿using HelpBox.Core.Models;
+using HelpBox.Data.Configurations;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,10 @@ namespace HelpBox.Data
         //Veritabanında tablolar oluşmadan önce çalışacak olan metot
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            
         }
     }
 }

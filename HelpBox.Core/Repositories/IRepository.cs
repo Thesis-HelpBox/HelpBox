@@ -15,7 +15,7 @@ namespace HelpBox.Core.Repositories
 
         //Find(x=>x.Id=23) sorgusuyla aranan ürün
         //TEntity parametresini alan ve geriye bool dönen bir metot
-        Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate);
+        IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
 
         //Category.SingleOrDefaultAsync(x=>x.name="kalem")
         Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate);
