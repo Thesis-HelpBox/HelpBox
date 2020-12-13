@@ -2,22 +2,23 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HelpBox.Data.Repositories
 {
-    class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    //CRUD işlemleri
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
+        protected readonly DbContext _context;
+        private readonly DbSet<TEntity> _dbSet;
 
-        public readonly DbContext _context;
-        public readonly DbSet<TEntity> _dbSet;
-
-        public Repository(DbContext context)
+        public Repository(AppDbContext context)
         {
             _context = context;
-            _dbSet = context.Set<TEntity>(); 
+            _dbSet = context.Set<TEntity>();
         }
 
         public async Task AddAsync(TEntity entity)
@@ -30,39 +31,42 @@ namespace HelpBox.Data.Repositories
             await _dbSet.AddRangeAsync(entities);
         }
 
-        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
+        public async Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate)
         {
-            return _dbSet.Find(predicate);
+            return await _dbSet.Where(predicate).ToListAsync();
         }
 
-        public Task<IEnumerable<TEntity>> GetAllAsync()
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _dbSet.ToListAsync();
         }
 
-        public Task<TEntity> GetByIdAsync(int Id)
+        public async Task<TEntity> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _dbSet.FindAsync(id);
         }
 
         public void Remove(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dbSet.Remove(entity);
         }
 
-        public void RemoveRange(IEnumerable<TEntity> entity)
+        public void RemoveRange(IEnumerable<TEntity> entities)
         {
-            throw new NotImplementedException();
+            _dbSet.RemoveRange(entities);
         }
 
-        public Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
+        public async Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return await _dbSet.SingleOrDefaultAsync(predicate);
         }
 
         public TEntity Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            _context.Entry(entity).State = EntityState.Modified;
+
+            return entity;
         }
+
     }
 }

@@ -9,6 +9,6 @@ namespace HelpBox.Core.Repositories
     public interface IProductRepository: IRepository<Product>
     {
         //Urunleri kategorilerle beraber getir
-        Task<Product> GetWithProductByIdAsync(int ProductId);
+        Task<Product> GetWithCategoryByIdAsync(int ProductId);
     }
 }

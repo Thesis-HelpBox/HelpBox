@@ -7,7 +7,7 @@ using System.Text;
 
 namespace HelpBox.Data.Configurations
 {
-    class ProductConfigution : IEntityTypeConfiguration<Product>
+    public class ProductConfigution : IEntityTypeConfiguration<Product>
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
@@ -25,7 +25,7 @@ namespace HelpBox.Data.Configurations
             builder.Property(x => x.IsActive).IsRequired();
             builder.Property(x => x.Photo).IsRequired();
 
-
+            builder.ToTable("Products");
         }
     }
 }
