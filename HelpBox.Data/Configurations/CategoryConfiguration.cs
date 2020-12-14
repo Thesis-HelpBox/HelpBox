@@ -18,7 +18,8 @@ namespace HelpBox.Data.Configurations
             builder.Property(x => x.Id).UseIdentityColumn();
             //Name zorunlu alan olsun ve max uzunluğu 200 olsun
             builder.Property(x => x.Name).IsRequired().HasMaxLength(200);
-           
+
+            builder.ToTable("Categories");
         }
     }
 }

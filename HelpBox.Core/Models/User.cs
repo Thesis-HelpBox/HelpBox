@@ -5,9 +5,9 @@ using System.Text;
 
 namespace HelpBox.Core.Models
 {
-    public class Users
+    public class User
     {
-        public Users()
+        public User()
         {
             Customers = new Collection<Customer>();
             Senders = new Collection<Sender>();

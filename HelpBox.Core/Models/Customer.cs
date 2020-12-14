@@ -16,6 +16,6 @@ namespace HelpBox.Core.Models
         public string District { get; set; }
         public string IdentityNumber { get; set; }
 
-        public virtual Users User { get; set; }
+        public virtual User User { get; set; }
     }
 }

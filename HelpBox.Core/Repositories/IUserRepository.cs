@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace HelpBox.Core.Repositories
 {
-    public interface IUserRepository:IRepository<Users>
+    public interface IUserRepository:IRepository<User>
     {
         //Kullanıcıları getir
-        Task<Users> GetWithUserByIdAsync(int UserId);
+        Task<User> GetWithUserByIdAsync(int UserId);
     }
 }

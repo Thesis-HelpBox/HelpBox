@@ -7,9 +7,9 @@ using System.Text;
 
 namespace HelpBox.Data.Configurations
 {
-    class CustomerConfiguration : IEntityTypeConfiguration<Customer>
+    class SenderConfiguration : IEntityTypeConfiguration<Sender>
     {
-        public void Configure(EntityTypeBuilder<Customer> builder)
+        public void Configure(EntityTypeBuilder<Sender> builder)
         {
             //(x product nesnesini temsil ediyor)
             //Id'yi primary key yap
@@ -24,7 +24,7 @@ namespace HelpBox.Data.Configurations
             builder.Property(x => x.IdentityNumber).IsRequired();
             builder.Property(x => x.Communication).IsRequired();
 
-            builder.ToTable("Customer");
+            builder.ToTable("Sender");
         }
     }
 }

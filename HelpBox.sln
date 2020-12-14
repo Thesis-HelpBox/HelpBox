@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeloBox.API", "HeloBox.API\HeloBox.API.csproj", "{BAD639AF-C06D-4CBB-B550-4E7A35D87756}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeloBox.API", "HeloBox.API\HeloBox.API.csproj", "{BAD639AF-C06D-4CBB-B550-4E7A35D87756}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpBox.Core", "HelpBox.Core\HelpBox.Core.csproj", "{FF1B2DEA-34B8-41DE-B659-85C5C3303DA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelpBox.Core", "HelpBox.Core\HelpBox.Core.csproj", "{FF1B2DEA-34B8-41DE-B659-85C5C3303DA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpBox.Data", "HelpBox.Data\HelpBox.Data.csproj", "{A06D2BB0-91A2-459C-B9FF-BF679B2B0CC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelpBox.Data", "HelpBox.Data\HelpBox.Data.csproj", "{A06D2BB0-91A2-459C-B9FF-BF679B2B0CC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpBox.Service", "HelpBox.Service\HelpBox.Service.csproj", "{D444FC65-F43C-4615-9AE6-C308E01D3A24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelpBox.Service", "HelpBox.Service\HelpBox.Service.csproj", "{D444FC65-F43C-4615-9AE6-C308E01D3A24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpBox.Web", "HelpBox.Web\HelpBox.Web.csproj", "{A3F55AEE-06CB-4878-93B7-0636227ED2C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D444FC65-F43C-4615-9AE6-C308E01D3A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D444FC65-F43C-4615-9AE6-C308E01D3A24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D444FC65-F43C-4615-9AE6-C308E01D3A24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3F55AEE-06CB-4878-93B7-0636227ED2C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F55AEE-06CB-4878-93B7-0636227ED2C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F55AEE-06CB-4878-93B7-0636227ED2C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F55AEE-06CB-4878-93B7-0636227ED2C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

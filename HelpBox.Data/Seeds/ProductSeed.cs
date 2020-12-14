@@ -18,9 +18,9 @@ namespace HelpBox.Data.Seeds
 
         public void Configure(EntityTypeBuilder<Product> builder)
         {
-            builder.HasData(
-                new Product { Id=1, Name="Gömlek", Coupon=30, CategoryId=1, IsActive=true, Description="Beyaz Gömlek", Photo=""}
-                );
+            //builder.HasData(
+            //    new Product { Id=1, Name="Gömlek", Coupon=30, CategoryId=1, IsActive=true, Description="Beyaz Gömlek", Photo=""}
+            //    );
         }
     }
 }

@@ -14,9 +14,9 @@ namespace HelpBox.Core.Service
         //Tüm ürünleri çekme
         Task<IEnumerable<TEntity>> GetAllAsync();
 
-        //Find(x=>x.Id=23) sorgusuyla aranan ürün
+        //Where(x=>x.Id=23) sorgusuyla aranan ürün
         //TEntity parametresini alan ve geriye bool dönen bir metot
-        Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate);
+        Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate);
 
         //Category.SingleOrDefaultAsync(x=>x.name="kalem")
         Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate);
@@ -35,9 +35,6 @@ namespace HelpBox.Core.Service
 
         //Güncelleme
         TEntity Update(TEntity entity);
-
-
-
 
     }
 }
