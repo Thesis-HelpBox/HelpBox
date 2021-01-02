@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HelpBox.Core.Service
+namespace HelpBox.Service.Services
 {
-    public interface ICustomerService
+    public class SenderService
     {
     }
 }
